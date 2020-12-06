@@ -303,7 +303,7 @@ export const postFavorite = (dishId) => (dispatch) => {
 
     const bearer = 'Bearer ' + localStorage.getItem('token');
 
-    return fetch(baseUrl + 'favorites/' + dishId, {
+    return fetch(baseUrl + 'favourites/' + dishId, {
         method: "POST",
         body: JSON.stringify({"_id": dishId}),
         headers: {
@@ -333,7 +333,7 @@ export const deleteFavorite = (dishId) => (dispatch) => {
 
     const bearer = 'Bearer ' + localStorage.getItem('token');
 
-    return fetch(baseUrl + 'favorites/' + dishId, {
+    return fetch(baseUrl + 'favourites/' + dishId, {
         method: "DELETE",
         headers: {
           'Authorization': bearer
@@ -362,7 +362,7 @@ export const fetchFavorites = () => (dispatch) => {
 
     const bearer = 'Bearer ' + localStorage.getItem('token');
 
-    return fetch(baseUrl + 'favorites', {
+    return fetch(baseUrl + 'favourites', {
         headers: {
             'Authorization': bearer
         },
